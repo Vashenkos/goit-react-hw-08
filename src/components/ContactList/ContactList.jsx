@@ -3,7 +3,6 @@ import {
   selectSortBy,
   selectSortedContacts,
 } from "../../redux/contacts/selectors";
-import css from "./ContactList.module.css";
 import Contact from "../Contact/Contact";
 import { useEffect, useState } from "react";
 import { setSortBy } from "../../redux/contacts/slice";
@@ -44,23 +43,23 @@ function ContactList() {
 
   return (
     <>
-      <div className={css.viewStyles}>
-        <button className={css.button} onClick={handleViewChange}>
+      <div >
+        <button onClick={handleViewChange}>
           {viewMode === "grid" ? <FaListUl /> : <FiGrid />}
         </button>
       </div>
 
-      <select value={sortBy} className={css.select} onChange={handleSortChange}>
+      <select value={sortBy}  onChange={handleSortChange}>
         <option value="name">By Name</option>
         <option value="date">By Date</option>
       </select>
 
       {contacts.length === 0 ? (
         filter ? (
-          <p className={css.noFound}>No contacts found 😔</p>
+          <p>No contacts found 😔</p>
         ) : (
           <div
-            className={css.noContacts}
+          
             style={{
               color: textColor,
             }}
@@ -86,7 +85,7 @@ function ContactList() {
           </div>
         )
       ) : (
-        <ul className={viewMode === "grid" ? css.grid : css.list}>
+        <ul>
           {contacts.map((contact, index) => (
             <Contact
               key={contact.id}

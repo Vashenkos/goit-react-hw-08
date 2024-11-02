@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { updateContact } from "../../redux/contacts/operations";
 import * as Yup from "yup";
 import toast from "react-hot-toast";
-import css from "./EditContact.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ContactSchema = Yup.object().shape({
@@ -40,14 +39,14 @@ function EditContact({ contact, onClose }) {
   return ReactDOM.createPortal(
     <AnimatePresence mode="wait">
       <motion.div
-        className={css.overlay}
+  
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
         <motion.div
-          className={css.modal}
+      
           initial={{ scale: 0, opacity: 0, rotate: 180 }}
           animate={{ scale: 1, opacity: 1, rotate: 0 }}
           exit={{ scale: 0, opacity: 0, rotate: 180 }}

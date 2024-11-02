@@ -1,7 +1,6 @@
 import { FaRegTrashCan, FaRegUser } from "react-icons/fa6";
 import { deleteContact } from "../../redux/contacts/operations";
 import { useDispatch } from "react-redux";
-import css from "./Contact.module.css";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
 import toast from "react-hot-toast";

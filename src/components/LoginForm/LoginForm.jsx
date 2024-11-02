@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { logIn } from "../../redux/auth/operations";
-import css from "./LoginForm.module.css";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { selectIsLoadingAuth } from "../../redux/auth/selectors";
@@ -41,7 +40,7 @@ export const LoginForm = () => {
 
   return (
     <motion.div
-      className={css.wrapper}
+  
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -53,11 +52,11 @@ export const LoginForm = () => {
         onSubmit={handleSubmit}
       >
         {({ isSubmitting }) => (
-          <Form className={css.form} autoComplete="off">
-            <label className={css.label}>
+          <Form  autoComplete="off">
+            <label >
               Email
               <Field
-                className={css.input}
+              
                 type="email"
                 name="email"
                 autoComplete="email"
@@ -65,20 +64,20 @@ export const LoginForm = () => {
               <ErrorMessage
                 name="email"
                 component="div"
-                className={css.error}
+              
               />
             </label>
-            <label className={css.label}>
+            <label >
               Password
-              <Field className={css.input} type="password" name="password" />
+              <Field type="password" name="password" />
               <ErrorMessage
                 name="password"
                 component="div"
-                className={css.error}
+                
               />
             </label>
             <button
-              className={css.button}
+              
               type="submit"
               disabled={isSubmitting}
             >
