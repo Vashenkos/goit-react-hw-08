@@ -59,41 +59,41 @@ function EditContact({ contact, onClose }) {
             enableReinitialize
           >
             {({ isSubmitting, resetForm }) => (
-              <Form className={css.form}>
-                <div className={css.wrapper}>
-                  <label className={css.label}>
+              <Form >
+                <div >
+                  <label >
                     Name
-                    <Field className={css.input} type="text" name="name" />
+                    <Field  type="text" name="name" />
                   </label>
                   <ErrorMessage
-                    className={css.message}
+                    
                     name="name"
                     component="span"
                   />
                 </div>
 
-                <div className={css.wrapper}>
-                  <label className={css.label}>
+                <div >
+                  <label >
                     Number
-                    <Field className={css.input} type="text" name="number" />
+                    <Field  type="text" name="number" />
                   </label>
                   <ErrorMessage
-                    className={css.message}
+                    
                     name="number"
                     component="span"
                   />
                 </div>
 
-                <div className={css.buttonsWrapper}>
+                <div >
                   <button
-                    className={css.button}
+                   
                     type="submit"
                     disabled={isSubmitting}
                   >
                     Save
                   </button>
                   <button
-                    className={css.button}
+                    
                     type="button"
                     onClick={() => handleCancel(resetForm)}
                   >
