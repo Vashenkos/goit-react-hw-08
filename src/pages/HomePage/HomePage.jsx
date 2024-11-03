@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import DocumentTitle from "../../components/DocumentTitle";
-import css from "./HomePage.module.css";
 import { TypeAnimation } from "react-type-animation";
 
 export default function HomePage() {
@@ -8,29 +7,28 @@ export default function HomePage() {
     <>
       <DocumentTitle>Home</DocumentTitle>
       <motion.div
-        className={css.wrapper}
+      
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className={css.image}>
+        <div >
           <img
             src="/contact-book.png"
             alt="Contacts Book image"
-            className={css.image}
+          
           />
         </div>
 
         <motion.div
-          className={css.content}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <h1 className={css.title}>
+          <h1 >
             Welcome to your <span>PhoneBook!</span>
           </h1>
-          <p className={css.text}>
+          <p >
             <TypeAnimation
               sequence={[
                 "Save your contacts",
