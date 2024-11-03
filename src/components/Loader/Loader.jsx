@@ -3,8 +3,8 @@ import { Oval } from "react-loader-spinner";
 const Loader = () => {
   return (
     <>
-      <div className={css.overlay}></div>
-      <div className={css.loader}>
+      <div></div>
+      <div >
         <Oval
           visible={true}
           height="80"

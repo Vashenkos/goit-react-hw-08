@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchContacts } from "../../redux/contacts/operations";
 import { selectError, selectIsLoading } from "../../redux/contacts/selectors";
-import css from "./ContactsPage.module.css";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import Loader from "../../components/Loader/Loader";
@@ -25,12 +24,12 @@ export default function ContactPage() {
 
   return (
     <motion.div
-      className={css.wrapper}
+      
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 1 }}
     >
-      <div className={css.formWrapper}>
+      <div >
         <ContactForm />
         <SearchBox />
       </div>
@@ -42,7 +41,7 @@ export default function ContactPage() {
       )}
 
       {!isLoading && !error && (
-        <div className={css.contactsWrapper}>
+        <div>
           <ContactList />
         </div>
       )}
