@@ -13,11 +13,11 @@ export default function HomePage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div >
-          <img
-            src="/contact-book.png"
+        <div className="Bookimage">
+          <img 
+            src="/public/notebook-of-contacts.png"
             alt="Contacts Book image"
-          
+           
           />
         </div>
 
