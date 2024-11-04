@@ -1,6 +1,6 @@
 import React from 'react'; // Додано імпорт React  
 import App from "./App.jsx";  
-import { StrictMode } from "react"; // StrictMode імпортується  
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";  
 import { Provider } from "react-redux";  
 import { persistor, store } from "./redux/store.js";  
