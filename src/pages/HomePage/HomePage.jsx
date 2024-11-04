@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import DocumentTitle from "../../components/DocumentTitle";
 import { TypeAnimation } from "react-type-animation";

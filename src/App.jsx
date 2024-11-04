@@ -1,4 +1,5 @@
-import { useEffect, lazy, Suspense } from "react";
+import React, { useEffect, lazy, Suspense } from "react";  
+// import { useEffect, lazy, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { PrivateRoute } from "./components/PrivateRoute";

@@ -1,3 +1,4 @@
+import React from "react";
 import DocumentTitle from "../../components/DocumentTitle";
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 

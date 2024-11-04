@@ -1,3 +1,4 @@
+import React from "react"; 
 import { FaRegTrashCan, FaRegUser } from "react-icons/fa6";
 import { deleteContact } from "../../redux/contacts/operations";
 import { useDispatch } from "react-redux";
@@ -14,6 +15,7 @@ import { FiPhone } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "../../motion/motion";
 import EditContact from "../EditContact/EditContact";
+import css from "./Contact.module.css";  
 
 function Contact({ contact, index, isOpen, toggleMenu }) {
   const dispatch = useDispatch();
